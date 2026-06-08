@@ -17,7 +17,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#objectives">Objectives</a></li>
         <li><a href="#sabariah">Sabariah</a></li>
-        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#photos">Gallery</a></li>
         <li><a href="#data">Live Data</a></li>
         <li><a href="#updates">Updates</a></li>
         <li><a href="#contributors">Team</a></li>
@@ -198,6 +198,34 @@
     </div>
   </section>
 
+  <!-- PHOTO GALLERY -->
+  <section class="section" id="photos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Gallery</span>
+        <h2>Field Photos</h2>
+        <p class="section-sub-dark">From the beaches of Malaysia — sea turtle conservation in action.</p>
+      </div>
+      <div class="photo-grid">
+        <img src="images/seatru-01.jpg" alt="SEATRU field photo" class="photo-thumb" onclick="openLightbox(this.src)" />
+        <img src="images/seatru-02.jpg" alt="SEATRU field photo" class="photo-thumb" onclick="openLightbox(this.src)" />
+        <img src="images/seatru-03.jpg" alt="SEATRU field photo" class="photo-thumb" onclick="openLightbox(this.src)" />
+        <img src="images/seatru-04.jpg" alt="SEATRU field photo" class="photo-thumb" onclick="openLightbox(this.src)" />
+        <img src="images/seatru-05.jpg" alt="SEATRU field photo" class="photo-thumb" onclick="openLightbox(this.src)" />
+        <img src="images/seatru-06.jpg" alt="SEATRU field photo" class="photo-thumb" onclick="openLightbox(this.src)" />
+        <img src="images/seatru-07.jpg" alt="SEATRU field photo" class="photo-thumb" onclick="openLightbox(this.src)" />
+        <img src="images/seatru-08.jpg" alt="SEATRU field photo" class="photo-thumb" onclick="openLightbox(this.src)" />
+        <img src="images/seatru-09.jpg" alt="SEATRU field photo" class="photo-thumb" onclick="openLightbox(this.src)" />
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="Full size photo" />
+  </div>
+
   <!-- LIVE DATA -->
   <section class="section section-ocean" id="data">
     <div class="container">
@@ -334,6 +362,16 @@
         document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
       });
     });
+
+    // Lightbox
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('open');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 
     // Fade-in on scroll
     const observer = new IntersectionObserver((entries) => {

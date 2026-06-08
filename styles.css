@@ -286,6 +286,31 @@ body {
 .contributor-card p { color: rgba(255,255,255,0.6); font-size: 0.85rem; }
 .contributor-card code { background: rgba(0,0,0,0.3); padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.8rem; color: #6ee7b7; }
 
+/* ===== PHOTO GRID ===== */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.8rem;
+}
+.photo-thumb {
+  width: 100%; aspect-ratio: 1; object-fit: cover;
+  border-radius: 12px; cursor: pointer;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.photo-thumb:hover { transform: scale(1.03); opacity: 0.9; }
+
+/* ===== LIGHTBOX ===== */
+.lightbox {
+  display: none; position: fixed; inset: 0; z-index: 999;
+  background: rgba(0,0,0,0.92); align-items: center; justify-content: center;
+}
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 90vw; max-height: 90vh; border-radius: 8px; object-fit: contain; }
+.lightbox-close {
+  position: absolute; top: 1.5rem; right: 2rem;
+  color: white; font-size: 2.5rem; cursor: pointer; line-height: 1;
+}
+
 /* ===== GALLERY ===== */
 .section-light { background: #f0fdf4; }
 .section-sub-dark { color: #6b7280; margin-top: 0.5rem; }

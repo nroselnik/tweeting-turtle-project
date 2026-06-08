@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tweeting Turtle Project</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">🐢 Tweeting Turtle</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#objectives">Objectives</a></li>
+        <li><a href="#sabariah">Sabariah</a></li>
+        <li><a href="#data">Live Data</a></li>
+        <li><a href="#updates">Updates</a></li>
+        <li><a href="#contributors">Team</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wave-bg"></div>
+    <div class="hero-content">
+      <span class="hero-tag">Malaysia Sea Turtle Conservation</span>
+      <h1>Tweeting Turtle<br><span class="accent">Project</span></h1>
+      <p>Using open-source IoT technology to track, protect, and share the story of Malaysia's sea turtles — with everyone.</p>
+      <div class="hero-btns">
+        <a href="#data" class="btn btn-primary">View Live Data</a>
+        <a href="#about" class="btn btn-outline">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-turtle">
+      <div class="turtle-circle">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="100" cy="105" rx="55" ry="45" fill="#2d7a4f"/>
+          <ellipse cx="100" cy="100" rx="48" ry="38" fill="#3a9e68"/>
+          <!-- shell pattern -->
+          <ellipse cx="100" cy="98" rx="20" ry="16" fill="#2d7a4f" opacity="0.5"/>
+          <ellipse cx="78" cy="105" rx="13" ry="10" fill="#2d7a4f" opacity="0.4"/>
+          <ellipse cx="122" cy="105" rx="13" ry="10" fill="#2d7a4f" opacity="0.4"/>
+          <ellipse cx="88" cy="118" rx="12" ry="9" fill="#2d7a4f" opacity="0.4"/>
+          <ellipse cx="112" cy="118" rx="12" ry="9" fill="#2d7a4f" opacity="0.4"/>
+          <!-- head -->
+          <ellipse cx="100" cy="62" rx="14" ry="12" fill="#3a9e68"/>
+          <!-- flippers -->
+          <ellipse cx="52" cy="95" rx="18" ry="8" fill="#3a9e68" transform="rotate(-20 52 95)"/>
+          <ellipse cx="148" cy="95" rx="18" ry="8" fill="#3a9e68" transform="rotate(20 148 95)"/>
+          <ellipse cx="62" cy="133" rx="14" ry="7" fill="#3a9e68" transform="rotate(20 62 133)"/>
+          <ellipse cx="138" cy="133" rx="14" ry="7" fill="#3a9e68" transform="rotate(-20 138 133)"/>
+          <!-- eyes -->
+          <circle cx="93" cy="59" r="3" fill="#1a3a2a"/>
+          <circle cx="107" cy="59" r="3" fill="#1a3a2a"/>
+          <circle cx="94" cy="58" r="1" fill="white"/>
+          <circle cx="108" cy="58" r="1" fill="white"/>
+          <!-- GPS tag indicator -->
+          <rect x="90" y="78" width="20" height="12" rx="3" fill="#e74c3c" opacity="0.9"/>
+          <text x="100" y="88" text-anchor="middle" font-size="6" fill="white" font-family="Arial">GPS</text>
+        </svg>
+      </div>
+    </div>
+    <div class="scroll-hint">↓ Scroll to explore</div>
+  </header>
+
+  <!-- SPECIES BANNER -->
+  <section class="species-banner">
+    <div class="species-item">
+      <span class="species-icon">🟢</span>
+      <span>Green Sea Turtle</span>
+      <em>Chelonia mydas</em>
+    </div>
+    <div class="species-item">
+      <span class="species-icon">🟤</span>
+      <span>Hawksbill</span>
+      <em>Eretmochelys imbricata</em>
+    </div>
+    <div class="species-item">
+      <span class="species-icon">⚫</span>
+      <span>Leatherback</span>
+      <em>Dermochelys coriacea</em>
+    </div>
+    <div class="species-item">
+      <span class="species-icon">🫒</span>
+      <span>Olive Ridley</span>
+      <em>Lepidochelys olivacea</em>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Background</span>
+        <h2>Why This Project Matters</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Sea turtles are one of Malaysia's natural heritages — and one of the most vulnerable and endangered species. Malaysia is home to four species: green sea turtles, leatherbacks, olive ridleys, and hawksbills.</p>
+          <p>While conservation efforts exist, there are critical research gaps and <strong>limited knowledge sharing with the public</strong> — especially those who contribute to conservation funds.</p>
+          <p>One major barrier: commercial GPS trackers for adult sea turtles cost <strong>thousands of dollars</strong>. The Tweeting Turtle Project introduces an <strong>open-source tracker at roughly 1/8th the cost</strong>, making large-scale monitoring viable and affordable.</p>
+          <p>By leveraging IoT (Internet of Things) technology with microcontrollers like Arduino and ESP32, we gather real-time data on turtle movements and behaviours — then share it openly through platforms like this website and social media.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-number">4</div>
+            <div class="stat-label">Turtle species in Malaysia</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">1/8</div>
+            <div class="stat-label">Cost vs. commercial trackers</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">IoT</div>
+            <div class="stat-label">Real-time data sharing</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">Open</div>
+            <div class="stat-label">Source & accessible</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OBJECTIVES -->
+  <section class="section section-dark" id="objectives">
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-tag">Goals</span>
+        <h2>Research Objectives</h2>
+      </div>
+      <div class="objectives-grid">
+        <div class="objective-card">
+          <div class="obj-number">01</div>
+          <div class="obj-icon">🛰️</div>
+          <h3>GPS Tracking</h3>
+          <p>Track and investigate <strong>internesting sea turtles</strong> using open-source GPS trackers and IoT technology to map their movement patterns.</p>
+        </div>
+        <div class="objective-card">
+          <div class="obj-number">02</div>
+          <div class="obj-icon">🥚</div>
+          <h3>Hatching Monitoring</h3>
+          <p>Investigate the reliability and accuracy of the <strong>ArduTurtle</strong> microcontroller-based sensor system to monitor the turtle hatching process in the field.</p>
+        </div>
+        <div class="objective-card">
+          <div class="obj-number">03</div>
+          <div class="obj-icon">⚡</div>
+          <h3>Hatchling Energetics</h3>
+          <p>Investigate the <strong>energetics of hatchlings</strong> — from hatching, through emergence, to reaching the sand surface — to better understand survival rates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SABARIAH SPOTLIGHT -->
+  <section class="section" id="sabariah">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Featured Individual</span>
+        <h2>Meet Sabariah</h2>
+      </div>
+      <div class="turtle-profile">
+        <div class="profile-badge">
+          <div class="badge-turtle">🐢</div>
+          <div class="badge-info">
+            <h3>Sabariah</h3>
+            <p>Green Sea Turtle</p>
+          </div>
+        </div>
+        <div class="profile-details">
+          <div class="profile-row">
+            <span class="profile-label">Species</span>
+            <span class="profile-value"><em>Chelonia mydas</em> (Green Sea Turtle)</span>
+          </div>
+          <div class="profile-row">
+            <span class="profile-label">Tracker</span>
+            <span class="profile-value">Arribadda Horizon Artic V2 — satellite tracking board</span>
+          </div>
+          <div class="profile-row">
+            <span class="profile-label">Study</span>
+            <span class="profile-value">Internesting movement & GPS tracking</span>
+          </div>
+          <div class="profile-row">
+            <span class="profile-label">Status</span>
+            <span class="profile-value"><span class="status-live">● Active</span> — transmitting data</span>
+          </div>
+        </div>
+        <p class="profile-desc">Sabariah is a Green Sea Turtle fitted with the Arribadda Horizon Artic V2 satellite tracking board — one of the open-source trackers at the heart of this project. Her movement data helps researchers understand internesting patterns at a fraction of the traditional cost.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVE DATA -->
+  <section class="section section-ocean" id="data">
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-tag">Real-Time</span>
+        <h2>Live Sensor Data</h2>
+        <p class="section-sub">Data streamed live via Adafruit IO from field-deployed sensors.</p>
+      </div>
+      <div class="data-embed-placeholder">
+        <div class="embed-note">
+          <span class="embed-icon">📡</span>
+          <h3>Adafruit IO Dashboard</h3>
+          <p>To embed your live Adafruit IO dashboard, replace this block with your public dashboard embed code.</p>
+          <p>In Adafruit IO: <strong>Dashboard → Share → Embed</strong> → paste the <code>&lt;iframe&gt;</code> here.</p>
+          <div class="embed-example">
+            <!-- Replace the iframe below with your Adafruit IO public dashboard embed -->
+            <!-- Example:
+            <iframe src="https://io.adafruit.com/YOUR_USERNAME/dashboards/YOUR_DASHBOARD?kiosk=true"
+                    width="100%" height="500" frameborder="0"></iframe>
+            -->
+            <div class="placeholder-screen">
+              <span>📊 Live dashboard will appear here</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UPDATES -->
+  <section class="section" id="updates">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">News</span>
+        <h2>Current Updates</h2>
+      </div>
+      <div class="updates-grid">
+        <article class="update-card">
+          <div class="update-date">2026</div>
+          <h3>Sensors Completed &amp; Lab-Tested ✅</h3>
+          <p>Both the <strong>temperature &amp; humidity sensor</strong> and the <strong>vibration sensor</strong> modules have been successfully tested in the lab. Data is published live via <strong>Adafruit IO using MQTT</strong>.</p>
+          <span class="update-tag">Hardware</span>
+        </article>
+        <article class="update-card">
+          <div class="update-date">IoT</div>
+          <h3>Two Boards Supported</h3>
+          <p>ArduTurtle now runs on both the <strong>ESP32 Vroom</strong> development board and the compact <strong>Xiao ESP32 C3</strong> (Seeedstudio) — which includes SD card, OLED display, RTC, and BMS built in.</p>
+          <span class="update-tag">Hardware</span>
+        </article>
+        <article class="update-card">
+          <div class="update-date">Active</div>
+          <h3>Sabariah is Transmitting</h3>
+          <p>Our first tracked individual, Sabariah, is fitted with the Arribadda Horizon Artic V2 board and actively sending satellite data.</p>
+          <span class="update-tag">Tracking</span>
+        </article>
+        <article class="update-card">
+          <div class="update-date">Soon</div>
+          <h3>Code on GitHub</h3>
+          <p>Current sensor codes are being prepared for open-source release on GitHub — enabling other researchers to replicate and build on this work.</p>
+          <span class="update-tag">Open Source</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTRIBUTORS -->
+  <section class="section section-dark" id="contributors">
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-tag">Team</span>
+        <h2>Contributors</h2>
+        <p class="section-sub">The researchers and conservationists behind the Tweeting Turtle Project.</p>
+      </div>
+      <div class="contributors-grid">
+        <!-- Add contributor cards here -->
+        <div class="contributor-card add-card">
+          <div class="contributor-avatar">+</div>
+          <h3>Add Team Members</h3>
+          <p>Edit <code>index.html</code> to add contributor names, roles, and affiliations here.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-logo">🐢</span>
+          <div>
+            <strong>Tweeting Turtle Project</strong>
+            <p>Open-source sea turtle conservation, Malaysia</p>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#objectives">Objectives</a>
+          <a href="#data">Live Data</a>
+          <a href="#contributors">Team</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Built with open-source tools. Data shared openly for conservation. 🌊</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Sticky nav on scroll
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.objective-card, .stat-card, .update-card, .contributor-card').forEach(el => {
+      el.classList.add('fade-in');
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

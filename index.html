@@ -194,26 +194,90 @@
     </div>
   </section>
 
-  <!-- SENSOR GALLERY -->
+  <!-- ARDUTUTLE SECTION -->
   <section class="section section-light" id="gallery">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Hardware</span>
+        <span class="section-tag">Open-Source Hardware</span>
         <h2>ArduTurtle Sensor System</h2>
-        <p class="section-sub-dark">Open-source sensor modules for monitoring turtle hatching in the field.</p>
+        <p class="section-sub-dark">A modular IoT environmental logger built for ecological field research — open-source and affordable.</p>
       </div>
+
+      <!-- Variants -->
+      <div class="variants-grid">
+        <div class="variant-card iot">
+          <div class="variant-header">
+            <span class="variant-badge">IoT</span>
+            <h3>ArduTurtle-IoT</h3>
+            <p>Wi-Fi enabled lab &amp; station logger with live cloud dashboard</p>
+          </div>
+          <ul class="variant-features">
+            <li>Auto Wi-Fi config via <strong>WiFiManager</strong></li>
+            <li>RTC sync via <strong>NTP</strong></li>
+            <li>Local web interface — set intervals, download CSV</li>
+            <li>Live data to <strong>Adafruit IO</strong> via MQTT</li>
+            <li>OLED display for real-time readings</li>
+          </ul>
+        </div>
+        <div class="variant-card field">
+          <div class="variant-header">
+            <span class="variant-badge">Field</span>
+            <h3>ArduTurtle-Field</h3>
+            <p>Low-power offline logger for remote battery-powered deployment</p>
+          </div>
+          <ul class="variant-features">
+            <li><strong>Deep sleep</strong> mode for maximum battery life</li>
+            <li>Hotspot mode for wireless configuration</li>
+            <li>SD card CSV logging with module name tagging</li>
+            <li>Auto-off hotspot after 5 min to conserve power</li>
+            <li>Solar charging + LiPo battery compatible</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hardware specs -->
+      <div class="specs-row">
+        <div class="specs-block">
+          <h4>Hardware Components</h4>
+          <ul class="specs-list">
+            <li><span class="spec-label">MCU</span> Seeed Studio XIAO ESP32C3</li>
+            <li><span class="spec-label">Sensor</span> Adafruit SHT31 — Temp &amp; Humidity</li>
+            <li><span class="spec-label">RTC</span> PCF8563 (I2C)</li>
+            <li><span class="spec-label">Display</span> 128×64 OLED (I2C)</li>
+            <li><span class="spec-label">Storage</span> Micro SD card slot</li>
+            <li><span class="spec-label">Vibration</span> SW-420 module</li>
+            <li><span class="spec-label">Power</span> 18650 batteries / D4 Solar (6V, 4W)</li>
+          </ul>
+        </div>
+        <div class="specs-block">
+          <h4>Data Format (CSV)</h4>
+          <div class="code-block">
+            <div class="code-label">IoT variant</div>
+            <code>Date, Time, Temperature, Humidity<br>08/06/2026, 14:30:00, 31.2, 78.5</code>
+          </div>
+          <div class="code-block" style="margin-top:0.8rem;">
+            <div class="code-label">Field variant</div>
+            <code>Module, Date, Time, Temp, Humidity<br>Module 1, 08/06/26, 14:30:00, 31.2, 78.5</code>
+          </div>
+          <p class="license-note">🔓 MIT Licensed — free to use, modify &amp; distribute.<br>
+          <a href="https://github.com/nroselnik/ArduTurtle-Temperature-and-Humidity" target="_blank">View code on GitHub →</a></p>
+        </div>
+      </div>
+
+      <!-- Photo gallery -->
+      <h4 class="gallery-sub-heading">Field Photos</h4>
       <div class="gallery-grid">
         <div class="gallery-item">
           <img src="images/sensor-overview.png" alt="Overall sensor design" />
-          <div class="gallery-caption">Overall design of the sensors. Powered by two 18650 batteries through a barrel powerjack. The vibration module uses a SW-420 module encapsulated in a round plastic container.</div>
+          <div class="gallery-caption">Overall sensor design powered by two 18650 batteries. Vibration module (SW-420) encapsulated in a round plastic container.</div>
         </div>
         <div class="gallery-item">
           <img src="images/sensor-components.png" alt="Sensor components" />
-          <div class="gallery-caption">Supporting components: microSD, RTC, and LCD screen — all connected via I2C.</div>
+          <div class="gallery-caption">Supporting components: microSD, RTC, and OLED display — all connected via I2C.</div>
         </div>
         <div class="gallery-item">
           <img src="images/field-deployment.png" alt="Field deployment at Chagar Hutang" />
-          <div class="gallery-caption">Field test deployment at Chagar Hutang. Module housed in a weatherproof box, powered by a D4 Solar Panel Charger with built-in 18650 battery (6V, 4W output).</div>
+          <div class="gallery-caption">Field deployment at Chagar Hutang in a weatherproof box, powered by a D4 Solar Panel Charger (6V, 4W output).</div>
         </div>
       </div>
     </div>

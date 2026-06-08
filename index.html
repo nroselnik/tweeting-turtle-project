@@ -17,6 +17,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#objectives">Objectives</a></li>
         <li><a href="#sabariah">Sabariah</a></li>
+        <li><a href="#gallery">Gallery</a></li>
         <li><a href="#data">Live Data</a></li>
         <li><a href="#updates">Updates</a></li>
         <li><a href="#contributors">Team</a></li>
@@ -38,31 +39,7 @@
     </div>
     <div class="hero-turtle">
       <div class="turtle-circle">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="100" cy="105" rx="55" ry="45" fill="#2d7a4f"/>
-          <ellipse cx="100" cy="100" rx="48" ry="38" fill="#3a9e68"/>
-          <!-- shell pattern -->
-          <ellipse cx="100" cy="98" rx="20" ry="16" fill="#2d7a4f" opacity="0.5"/>
-          <ellipse cx="78" cy="105" rx="13" ry="10" fill="#2d7a4f" opacity="0.4"/>
-          <ellipse cx="122" cy="105" rx="13" ry="10" fill="#2d7a4f" opacity="0.4"/>
-          <ellipse cx="88" cy="118" rx="12" ry="9" fill="#2d7a4f" opacity="0.4"/>
-          <ellipse cx="112" cy="118" rx="12" ry="9" fill="#2d7a4f" opacity="0.4"/>
-          <!-- head -->
-          <ellipse cx="100" cy="62" rx="14" ry="12" fill="#3a9e68"/>
-          <!-- flippers -->
-          <ellipse cx="52" cy="95" rx="18" ry="8" fill="#3a9e68" transform="rotate(-20 52 95)"/>
-          <ellipse cx="148" cy="95" rx="18" ry="8" fill="#3a9e68" transform="rotate(20 148 95)"/>
-          <ellipse cx="62" cy="133" rx="14" ry="7" fill="#3a9e68" transform="rotate(20 62 133)"/>
-          <ellipse cx="138" cy="133" rx="14" ry="7" fill="#3a9e68" transform="rotate(-20 138 133)"/>
-          <!-- eyes -->
-          <circle cx="93" cy="59" r="3" fill="#1a3a2a"/>
-          <circle cx="107" cy="59" r="3" fill="#1a3a2a"/>
-          <circle cx="94" cy="58" r="1" fill="white"/>
-          <circle cx="108" cy="58" r="1" fill="white"/>
-          <!-- GPS tag indicator -->
-          <rect x="90" y="78" width="20" height="12" rx="3" fill="#e74c3c" opacity="0.9"/>
-          <text x="100" y="88" text-anchor="middle" font-size="6" fill="white" font-family="Arial">GPS</text>
-        </svg>
+        <img src="images/sabariah.jpg" alt="Sabariah the Green Sea Turtle with GPS tracker" />
       </div>
     </div>
     <div class="scroll-hint">↓ Scroll to explore</div>
@@ -167,7 +144,7 @@
       </div>
       <div class="turtle-profile">
         <div class="profile-badge">
-          <div class="badge-turtle">🐢</div>
+          <img src="images/sabariah.jpg" alt="Sabariah" class="profile-photo" />
           <div class="badge-info">
             <h3>Sabariah</h3>
             <p>Green Sea Turtle</p>
@@ -192,6 +169,31 @@
           </div>
         </div>
         <p class="profile-desc">Sabariah is a Green Sea Turtle fitted with the Arribadda Horizon Artic V2 satellite tracking board — one of the open-source trackers at the heart of this project. Her movement data helps researchers understand internesting patterns at a fraction of the traditional cost.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SENSOR GALLERY -->
+  <section class="section section-light" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Hardware</span>
+        <h2>ArduTurtle Sensor System</h2>
+        <p class="section-sub-dark">Open-source sensor modules for monitoring turtle hatching in the field.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images/sensor-overview.png" alt="Overall sensor design" />
+          <div class="gallery-caption">Overall design of the sensors. Powered by two 18650 batteries through a barrel powerjack. The vibration module uses a SW-420 module encapsulated in a round plastic container.</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/sensor-components.png" alt="Sensor components" />
+          <div class="gallery-caption">Supporting components: microSD, RTC, and LCD screen — all connected via I2C.</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/field-deployment.png" alt="Field deployment at Chagar Hutang" />
+          <div class="gallery-caption">Field test deployment at Chagar Hutang. Module housed in a weatherproof box, powered by a D4 Solar Panel Charger with built-in 18650 battery (6V, 4W output).</div>
+        </div>
       </div>
     </div>
   </section>
@@ -270,11 +272,25 @@
         <p class="section-sub">The researchers and conservationists behind the Tweeting Turtle Project.</p>
       </div>
       <div class="contributors-grid">
-        <!-- Add contributor cards here -->
-        <div class="contributor-card add-card">
-          <div class="contributor-avatar">+</div>
-          <h3>Add Team Members</h3>
-          <p>Edit <code>index.html</code> to add contributor names, roles, and affiliations here.</p>
+        <div class="contributor-card">
+          <div class="contributor-avatar">🐢</div>
+          <h3>SEATRU</h3>
+          <p>Sea Turtle Research Unit — field operations and turtle tagging</p>
+        </div>
+        <div class="contributor-card">
+          <div class="contributor-avatar">🇬🇧</div>
+          <h3>Keele University</h3>
+          <p>United Kingdom — research collaboration and IoT development</p>
+        </div>
+        <div class="contributor-card">
+          <div class="contributor-avatar">🎓</div>
+          <h3>Universiti Malaysia Perlis</h3>
+          <p>UniMAP — sensor engineering and embedded systems</p>
+        </div>
+        <div class="contributor-card">
+          <div class="contributor-avatar">🌊</div>
+          <h3>Universiti Malaysia Terengganu</h3>
+          <p>UMT — marine biology and conservation research</p>
         </div>
       </div>
     </div>

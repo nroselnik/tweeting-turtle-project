@@ -9,10 +9,13 @@
 </head>
 <body>
 
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
   <!-- NAV -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <div class="nav-logo">🐢 Tweeting Turtle</div>
+      <a class="nav-logo" href="#" aria-label="Tweeting Turtle — home"><span class="logo-mark" aria-hidden="true">🐢</span> Tweeting Turtle</a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#objectives">Objectives</a></li>
@@ -26,7 +29,12 @@
   </nav>
 
   <!-- HERO -->
-  <header class="hero">
+  <header class="hero" id="main" tabindex="-1">
+    <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="auto"
+           poster="images/hero-turtle-poster.jpg" aria-hidden="true" tabindex="-1">
+      <source src="images/hero-turtle.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-scrim" aria-hidden="true"></div>
     <div class="wave-bg"></div>
     <div class="hero-content">
       <span class="hero-tag">Malaysia Sea Turtle Conservation</span>
@@ -136,19 +144,19 @@
       <div class="objectives-grid">
         <div class="objective-card">
           <div class="obj-number">01</div>
-          <div class="obj-icon">🛰️</div>
+          <div class="obj-icon"><svg class="icon" viewBox="0 0 24 24" role="img" aria-label="Satellite tracking"><path d="m13.5 3.5-3 3 4 4 3-3z"/><path d="m9.5 7.5-3 3 4 4 3-3z"/><path d="m6.5 10.5-3 3 4 4 3-3z"/><path d="M12.5 15.5 11 17a2.83 2.83 0 0 1-4-4l1.5-1.5"/><path d="M18 6a4 4 0 0 0-4-4"/><path d="M20.5 8.5a7 7 0 0 0-5-7"/></svg></div>
           <h3>GPS Tracking</h3>
           <p>Track and investigate <strong>internesting sea turtles</strong> using open-source GPS trackers and IoT technology to map their movement patterns.</p>
         </div>
         <div class="objective-card">
           <div class="obj-number">02</div>
-          <div class="obj-icon">🥚</div>
+          <div class="obj-icon"><svg class="icon" viewBox="0 0 24 24" role="img" aria-label="Egg hatching"><path d="M12 21c-3.6 0-6.5-2.5-6.5-6.5C5.5 9.5 8 3 12 3s6.5 6.5 6.5 11.5C18.5 18.5 15.6 21 12 21Z"/></svg></div>
           <h3>Hatching Monitoring</h3>
           <p>Investigate the reliability and accuracy of the <strong>ArduTurtle</strong> microcontroller-based sensor system to monitor the turtle hatching process in the field.</p>
         </div>
         <div class="objective-card">
           <div class="obj-number">03</div>
-          <div class="obj-icon">⚡</div>
+          <div class="obj-icon"><svg class="icon" viewBox="0 0 24 24" role="img" aria-label="Energetics"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
           <h3>Hatchling Energetics</h3>
           <p>Investigate the <strong>energetics of hatchlings</strong> — from hatching, through emergence, to reaching the sand surface — to better understand survival rates.</p>
         </div>
@@ -306,9 +314,9 @@
   </section>
 
   <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <span class="lightbox-close">&times;</span>
-    <img id="lightbox-img" src="" alt="Full size photo" />
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="lightbox-close" aria-label="Close photo viewer">&times;</button>
+    <img id="lightbox-img" src="" alt="Enlarged SEATRU field photo" />
   </div>
 
   <!-- LIVE DATA -->
@@ -321,7 +329,7 @@
       </div>
       <div class="data-embed-placeholder">
         <div class="embed-note">
-          <span class="embed-icon">📡</span>
+          <span class="embed-icon"><svg class="icon" viewBox="0 0 24 24" role="img" aria-label="Live signal"><path d="M4.9 19.1A10 10 0 0 1 4.9 4.9"/><path d="M7.8 16.2a6 6 0 0 1 0-8.4"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8a6 6 0 0 1 0 8.4"/><path d="M19.1 4.9a10 10 0 0 1 0 14.2"/></svg></span>
           <h3>Adafruit IO Dashboard</h3>
           <p>To embed your live Adafruit IO dashboard, replace this block with your public dashboard embed code.</p>
           <p>In Adafruit IO: <strong>Dashboard → Share → Embed</strong> → paste the <code>&lt;iframe&gt;</code> here.</p>
@@ -386,22 +394,22 @@
       </div>
       <div class="contributors-grid">
         <div class="contributor-card">
-          <div class="contributor-avatar">🐢</div>
+          <div class="contributor-avatar"><svg class="icon" viewBox="0 0 24 24" role="img" aria-label="Marine research unit"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg></div>
           <h3>SEATRU</h3>
           <p>Sea Turtle Research Unit — field operations and turtle tagging</p>
         </div>
         <div class="contributor-card">
-          <div class="contributor-avatar">🇬🇧</div>
+          <div class="contributor-avatar"><svg class="icon" viewBox="0 0 24 24" role="img" aria-label="University"><path d="M21.42 10.92a1 1 0 0 0 0-1.84L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.84l8.57 3.9a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></div>
           <h3>Keele University</h3>
           <p>United Kingdom — research collaboration and IoT development</p>
         </div>
         <div class="contributor-card">
-          <div class="contributor-avatar">🎓</div>
+          <div class="contributor-avatar"><svg class="icon" viewBox="0 0 24 24" role="img" aria-label="University"><path d="M21.42 10.92a1 1 0 0 0 0-1.84L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.84l8.57 3.9a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></div>
           <h3>Universiti Malaysia Perlis</h3>
           <p>UniMAP — sensor engineering and embedded systems</p>
         </div>
         <div class="contributor-card">
-          <div class="contributor-avatar">🌊</div>
+          <div class="contributor-avatar"><svg class="icon" viewBox="0 0 24 24" role="img" aria-label="University"><path d="M21.42 10.92a1 1 0 0 0 0-1.84L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.84l8.57 3.9a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></div>
           <h3>Universiti Malaysia Terengganu</h3>
           <p>UMT — marine biology and conservation research</p>
         </div>
@@ -434,11 +442,30 @@
   </footer>
 
   <script>
-    // Sticky nav on scroll
-    window.addEventListener('scroll', () => {
-      const nav = document.getElementById('navbar');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const nav = document.getElementById('navbar');
+    const progress = document.getElementById('scrollProgress');
+
+    // Respect reduced-motion: freeze hero video on its poster frame
+    const heroVideo = document.getElementById('heroVideo');
+    if (heroVideo && prefersReducedMotion) {
+      heroVideo.removeAttribute('autoplay');
+      heroVideo.addEventListener('loadeddata', () => heroVideo.pause());
+      heroVideo.pause();
+    }
+
+    // Sticky nav + scroll progress (throttled via rAF)
+    let ticking = false;
+    function onScroll() {
       nav.classList.toggle('scrolled', window.scrollY > 60);
-    });
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) { window.requestAnimationFrame(onScroll); ticking = true; }
+    }, { passive: true });
+    onScroll();
 
     // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -458,14 +485,20 @@
     }
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 
-    // Fade-in on scroll
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.objective-card, .stat-card, .update-card, .contributor-card').forEach(el => {
-      el.classList.add('fade-in');
-      observer.observe(el);
-    });
+    // Fade-in on scroll (skipped when reduced motion is preferred)
+    const revealEls = document.querySelectorAll('.objective-card, .stat-card, .update-card, .contributor-card, .species-card, .gallery-item');
+    if (!prefersReducedMotion) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+        });
+      }, { threshold: 0.12 });
+      revealEls.forEach((el, i) => {
+        el.classList.add('fade-in');
+        el.style.transitionDelay = Math.min(i % 4, 3) * 60 + 'ms'; // subtle stagger
+        observer.observe(el);
+      });
+    }
   </script>
 </body>
 </html>
